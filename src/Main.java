@@ -8,7 +8,6 @@ public class Main {
         System.out.println("Sistema De Almacen De Productos.");
 
         Almacen almacen = new Almacen(CAPACIDAD);
-        Encargado encargado = new Encargado();
 
         int opcion;
         do {
@@ -20,10 +19,10 @@ public class Main {
                     registrarEntradaProducto(almacen);
                     break;
                 case 2:
-                    cambiarProveedorDeProducto(almacen, encargado);
+                    cambiarProveedorDeProducto(almacen);
                     break;
                 case 3:
-                    encargado.generarReporteEntradaProductos(almacen);
+                    almacen.generarReporteEntradaProductos();
                     break;
                 case 0:
                     System.out.println("Saliendo del almacen");
@@ -65,7 +64,7 @@ public class Main {
     }
 
     // Cambiar proveedor de un producto
-    private static void cambiarProveedorDeProducto(Almacen almacen, Encargado encargado) {
+    private static void cambiarProveedorDeProducto(Almacen almacen) {
         System.out.println("\nCambiar proveedor de un producto:");
 
         int cantidad = almacen.obtenerCantidadProductos();
@@ -75,7 +74,7 @@ public class Main {
         }
 
         // Se muestra el reporte para que el usuario vea el número de cada producto
-        encargado.generarReporteEntradaProductos(almacen);
+        almacen.generarReporteEntradaProductos();
 
         int numero = leerEntero("Número del producto a modificar: ", 1);
         if (numero > cantidad) {

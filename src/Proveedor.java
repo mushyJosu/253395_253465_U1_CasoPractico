@@ -11,12 +11,15 @@ public class Proveedor {
     }
 
     public String getNombreEmpresa() {
+
         return nombreEmpresa;
     }
     public String getNombreRepartidor() {
+
         return nombreRepartidor;
     }
     public String getTelefonoContacto() {
+
         return telefonoContacto;
     }
 }

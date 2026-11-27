@@ -4,6 +4,7 @@ public class Producto {
     private double precioCompra;
     private Proveedor proveedor;
 
+    //inicializamos el constructor
     public  Producto(String nombre, int stock, double precioCompra,  Proveedor proveedor) {
         this.nombre = nombre;
         this.stock = stock;
@@ -11,22 +12,25 @@ public class Producto {
         this.proveedor = proveedor;
     }
 
-    //indicar qué devuelve
+    //indicar qué devuelve      indicamos tipo
     public void cambiarProveedor(Proveedor nuevoProveedor){
+
         this.proveedor = nuevoProveedor;
     }
-
     //get para leer en otra clase
     public String getNombre() {
         return  nombre;
     }
     public int getStock() {
+
         return stock;
     }
     public double getPrecioCompra() {
+
         return precioCompra;
     }
     public Proveedor getProveedor() {
+
         return proveedor;
     }
 }
